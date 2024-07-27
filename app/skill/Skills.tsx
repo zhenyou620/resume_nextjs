@@ -1,9 +1,9 @@
 import type { FC } from 'react';
-import SkillCard from '@/components/SkillCard';
-import type SkillsDetailType from '@/types/SkillsDetailType';
+import SkillCard from './SkillCard';
+import { SkillsType } from './type/SkillType';
 
 interface SkillsProps {
-  skillsData: SkillsDetailType[];
+  skillsData: SkillsType;
 }
 
 const Skills: FC<SkillsProps> = ({ skillsData }) => {
