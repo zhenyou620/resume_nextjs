@@ -10,7 +10,7 @@ type Props = {
   percentage: number;
 };
 
-const SkillCard: FC<Props> = ({ url, altText, name, percentage }) => {
+export const SkillCard: FC<Props> = ({ url, altText, name, percentage }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -44,5 +44,3 @@ const SkillCard: FC<Props> = ({ url, altText, name, percentage }) => {
     </Card>
   );
 };
-
-export default SkillCard;

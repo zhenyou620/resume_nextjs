@@ -1,4 +1,4 @@
-import { SkillsType } from './type/SkillType';
+import { SkillsType } from '../types/SkillType';
 
 const skillsData: SkillsType = [
   {

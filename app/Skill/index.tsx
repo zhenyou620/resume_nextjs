@@ -1,12 +1,12 @@
 import type { FC } from 'react';
-import SkillCard from './SkillCard';
-import { SkillsType } from './type/SkillType';
+import { SkillCard } from './components/SkillCard';
+import { SkillsType } from './types/SkillType';
 
 interface SkillsProps {
   skillsData: SkillsType;
 }
 
-const Skills: FC<SkillsProps> = ({ skillsData }) => {
+export const Skill: FC<SkillsProps> = ({ skillsData }) => {
   return (
     <section>
       <h2 className="mb-2 mt-12 text-4xl font-semibold">Skills</h2>
@@ -24,5 +24,3 @@ const Skills: FC<SkillsProps> = ({ skillsData }) => {
     </section>
   );
 };
-
-export default Skills;
