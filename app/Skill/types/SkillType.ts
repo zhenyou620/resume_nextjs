@@ -1,6 +1,6 @@
 export interface SkillType {
-  url?: string;
-  altText?: string;
+  url: string;
+  altText: string;
   name: string;
   percentage: number;
   category: 'design' | 'language' | 'framework' | 'tool';
