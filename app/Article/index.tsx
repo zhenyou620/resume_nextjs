@@ -3,7 +3,7 @@ import { ZennArticle } from './components/ZennArticle';
 import { type ZennArticleType } from './types/ZennArticleType';
 // import { getZennArticles } from '@/utils/getArticles';
 
-const ZennArticles: FC = () => {
+export const Articles: FC = () => {
   const [articles, setArticles] = useState<ZennArticleType[]>([]);
   // useEffect(() => {
   //   const fetchArticles = async () => {
@@ -29,5 +29,3 @@ const ZennArticles: FC = () => {
     </section>
   );
 };
-
-export default ZennArticles;

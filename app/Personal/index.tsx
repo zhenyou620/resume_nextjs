@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import Image from 'next/image';
 
-const NameAndFace: FC = () => {
+export const Personal: FC = () => {
   return (
     <div className="mx-auto mb-0 mt-8 flex flex-col content-center gap-5">
       <div className="mb-2 flex items-center gap-5">
@@ -24,6 +24,8 @@ const NameAndFace: FC = () => {
               src="/resume/zenn.svg"
               alt="Zenn Link"
               className="w-8"
+              width={100}
+              height={100}
             ></Image>
           </a>
           <a href="https://note.com/zhenyou620" className="w-18">
@@ -31,6 +33,8 @@ const NameAndFace: FC = () => {
               src="/resume/note.svg"
               alt="Note Link"
               className="w-8"
+              width={100}
+              height={100}
             ></Image>
           </a>
         </div>
@@ -38,5 +42,3 @@ const NameAndFace: FC = () => {
     </div>
   );
 };
-
-export default NameAndFace;
