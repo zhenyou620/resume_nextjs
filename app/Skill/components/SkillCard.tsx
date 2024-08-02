@@ -32,13 +32,15 @@ export const SkillCard: FC<Props> = ({ skillsData }) => {
 
   return (
     <>
-      {skillsData.map((skill: SkillType) => {
-        <Card className="w-">
+      {skillsData.map((skill: SkillType) => (
+        <Card className="" key={skill.name}>
           <CardContent>
             <div className="flex flex-row items-center gap-3 pt-4">
               <Image
                 src={skill.url}
                 alt={skill.altText}
+                width="36"
+                height="36"
                 className={skill.name === 'Figma' ? 'w-7' : 'w-9'}
               ></Image>
               <div className="w-full">
@@ -50,8 +52,8 @@ export const SkillCard: FC<Props> = ({ skillsData }) => {
               </div>
             </div>
           </CardContent>
-        </Card>;
-      })}
+        </Card>
+      ))}
     </>
   );
 };

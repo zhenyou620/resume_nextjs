@@ -4,8 +4,9 @@ import Image from 'next/image';
 export const Personal: FC = () => {
   return (
     <div className="mx-auto mb-0 mt-8 flex flex-col content-center gap-5">
-      <div className="mb-2 flex items-center gap-5">
-        <div className="face hidden h-14 w-14 rounded-xl sm:block"></div>
+      <div className="mb-2 flex items-center gap-6">
+        {/* <div className="face hidden h-14 w-14 rounded-xl sm:block"></div> */}
+        {/* <p className="text-8xl">👩🏻‍💻</p> */}
         <span className="-ml-1 text-6xl font-bold tracking-tight">
           Mayu Sakaguchi
         </span>
@@ -15,13 +16,13 @@ export const Personal: FC = () => {
           Mayu is a Software developer.&nbsp;&nbsp;I was born and raised in
           Nagoya in July 1999.
         </p>
-        <p>I like to drink, and recently craft beer has become my favourite.</p>
+        <p>I like to drink, and recently craft beer has become my favorite.</p>
       </div>
       <div className="flex flex-shrink-0 flex-col justify-end gap-4">
         <div className="flex gap-4">
           <a href="https://zenn.dev/zhenyou620" className="w-7">
             <Image
-              src="/resume/zenn.svg"
+              src="/zenn.svg"
               alt="Zenn Link"
               className="w-8"
               width={100}
@@ -30,7 +31,7 @@ export const Personal: FC = () => {
           </a>
           <a href="https://note.com/zhenyou620" className="w-18">
             <Image
-              src="/resume/note.svg"
+              src="/note.svg"
               alt="Note Link"
               className="w-8"
               width={100}
