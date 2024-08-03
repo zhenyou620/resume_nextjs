@@ -12,7 +12,7 @@ export const skillsData: SkillsType = [
     url: '/ts.png',
     altText: 'TypeScript img',
     name: 'Typescript',
-    percentage: 20,
+    percentage: 40,
     category: 'language',
   },
   {
@@ -61,7 +61,7 @@ export const skillsData: SkillsType = [
     url: '/react.svg',
     altText: 'React img',
     name: 'React',
-    percentage: 20,
+    percentage: 40,
     category: 'framework',
   },
   {
@@ -103,7 +103,7 @@ export const skillsData: SkillsType = [
     url: '/aws.svg',
     altText: 'AWS img',
     name: 'AWS',
-    percentage: 20,
+    percentage: 10,
     category: 'tool',
   },
 ];

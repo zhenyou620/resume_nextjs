@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 export const Personal: FC = () => {
   return (
-    <div className="mx-auto mb-0 mt-8 flex flex-col content-center gap-5">
-      <div className="mb-2 flex items-center gap-6">
+    <div className="mx-auto mb-0 mt-16 flex flex-col content-center gap-5">
+      <div className="flex items-center gap-6">
         {/* <div className="face hidden h-14 w-14 rounded-xl sm:block"></div> */}
         {/* <p className="text-8xl">👩🏻‍💻</p> */}
         <span className="-ml-1 text-6xl font-bold tracking-tight">
           Mayu Sakaguchi
         </span>
       </div>
-      <div className="text-base tracking-wide">
+      <div className="text-base tracking-wide text-muted-foreground">
         <p>
           Mayu is a Software developer.&nbsp;&nbsp;I was born and raised in
           Nagoya in July 1999.
@@ -34,6 +34,15 @@ export const Personal: FC = () => {
               src="/note.svg"
               alt="Note Link"
               className="w-8"
+              width={100}
+              height={100}
+            ></Image>
+          </a>
+          <a href="https://github.com/zhenyou620" className="w-7">
+            <Image
+              src="/github.svg"
+              alt="GitHub Link"
+              className="w-7"
               width={100}
               height={100}
             ></Image>

@@ -35,7 +35,7 @@ export const SkillCard: FC<Props> = ({ skillsData }) => {
       {skillsData.map((skill: SkillType) => (
         <Card className="" key={skill.name}>
           <CardContent>
-            <div className="flex flex-row items-center gap-3 pt-4">
+            <div className="flex flex-row items-center gap-3 pt-5">
               <Image
                 src={skill.url}
                 alt={skill.altText}
@@ -47,7 +47,10 @@ export const SkillCard: FC<Props> = ({ skillsData }) => {
                 <p className="text-base font-medium">{skill.name}</p>
                 <div className="flex items-center gap-1">
                   <p className="text-xs">{skill.percentage}%</p>
-                  <Progress value={progressValues[skill.name] || 0} />
+                  <Progress
+                    className="h-1"
+                    value={progressValues[skill.name] || 0}
+                  />
                 </div>
               </div>
             </div>
