@@ -7,7 +7,7 @@ export const Personal: FC = () => {
       <div className="flex items-center gap-6">
         {/* <div className="face hidden h-14 w-14 rounded-xl sm:block"></div> */}
         {/* <p className="text-8xl">👩🏻‍💻</p> */}
-        <span className="-ml-1 text-6xl font-bold tracking-tight">
+        <span className="-ml-[0.175rem] text-6xl font-bold tracking-tight">
           Mayu Sakaguchi
         </span>
       </div>

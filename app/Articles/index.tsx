@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, type FC } from 'react';
 import { ZennArticle } from './components/ZennArticle';
 import { type ZennArticleType } from './types/ZennArticleType';
@@ -20,7 +22,7 @@ export const Articles: FC = () => {
 
   return (
     <section>
-      <h1 className="mb-4 mt-12 text-4xl font-semibold">Zenn</h1>
+      <h1 className="mb-4 mt-12 text-2xl font-semibold">Zenn</h1>
       <div className="mb-10 grid gap-x-2 gap-y-3 sm:grid-cols-2">
         {articles.map((article) => (
           <ZennArticle article={article} key={article.id}></ZennArticle>
