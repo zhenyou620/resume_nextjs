@@ -1,8 +1,9 @@
-'use client';
+// 'use client';
 
 import { FC } from 'react';
 import { ZennArticle } from './components/ZennArticle';
-import { getZennArticles } from './api/getArticle';
+import { ZennArticleType } from './types/ZennArticleType';
+// import { getZennArticles } from './api/getArticle';
 
 export const Articles: FC = async () => {
   // const [articles, setArticles] = useState<ZennArticleType[]>([]);
@@ -25,4 +26,16 @@ export const Articles: FC = async () => {
       </div>
     </section>
   );
+};
+
+export const getZennArticles: () => Promise<ZennArticleType[]> = async () => {
+  const res = await fetch(
+    'https://zenn.dev/api/articles?username=zhenyou620&order=latest',
+    { next: { revalidate: 3600 } } // 1時間ごとに再検証
+  );
+
+  const data = await res.json();
+  const articles: ZennArticleType[] = data?.article?.slice(0, 10);
+
+  return articles;
 };
