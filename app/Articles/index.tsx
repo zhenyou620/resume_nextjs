@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import { ZennArticle } from './components/ZennArticle';
 import { ZennArticleType } from './types/ZennArticleType';
-// import { getZennArticles } from './api/getArticle';
 
 export const Articles: FC = async () => {
   // const [articles, setArticles] = useState<ZennArticleType[]>([]);
@@ -35,7 +34,7 @@ export const getZennArticles: () => Promise<ZennArticleType[]> = async () => {
   );
 
   const data = await res.json();
-  const articles: ZennArticleType[] = data?.article?.slice(0, 10);
+  const articles: ZennArticleType[] = data?.articles?.slice(0, 10);
 
   return articles;
 };
