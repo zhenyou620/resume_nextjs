@@ -8,19 +8,19 @@ type Props = {
 };
 
 export const ZennArticle: FC<Props> = ({ article }) => {
-  const zennUrl = 'https://zenn.dev/';
+  const zennUrl = 'https://zenn.dev';
 
   return (
     <a key={article.id} href={zennUrl.concat(article.path)}>
       <Card className="pr-2">
         <CardContent>
           <div className="flex flex-row items-center gap-3 pt-4">
-            <p className="p-2 text-6xl">{article.emoji}</p>
+            <span className="p-2 text-5xl">{article.emoji}</span>
             <div className="flex flex-col">
-              <h2 className="line-clamp-2 text-base font-bold tracking-tight">
+              <h2 className="line-clamp-2 text-base font-bold tracking-tight text-neutral-600">
                 {article.title}
               </h2>
-              <p className="text-xs font-medium text-gray-500">
+              <p className="text-xs font-medium text-neutral-500">
                 {dayjs(article.published_at).format('YYYY/MM/DD')}
               </p>
             </div>
