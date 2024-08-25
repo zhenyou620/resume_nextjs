@@ -10,7 +10,7 @@ export const Articles: FC = async () => {
 
   return (
     <section className="grid">
-      <h2 className="mb-7 mt-16 text-3xl font-semibold"># Articles</h2>
+      <h2 className="mb-7 mt-16 text-3xl font-semibold">Articles</h2>
       <div className="grid gap-x-2 gap-y-3 sm:grid-cols-2">
         {articles?.map((article) => (
           <ZennArticle article={article} key={article.id}></ZennArticle>

@@ -1,6 +1,7 @@
 import { Personal } from './(home)/Personal';
 import { Articles } from './(home)/Articles';
 import { Skill } from './(home)/Skill';
+import Image from 'next/image';
 
 export default function Home() {
   return (

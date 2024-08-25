@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Inter, Noto_Sans_JP } from 'next/font/google';
 import Script from 'next/script';
+import Image from 'next/image';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,6 +38,13 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"
           crossOrigin="anonymous"
         ></Script>
+        <Image
+          alt=""
+          src="/background.png"
+          width="1000"
+          height="1000"
+          className="absolute top-16 -right-3 blur opacity-45 max-w-none -translate-x-1/2 -translate-y-1/2 -z-10"
+        ></Image>
         {children}
       </body>
     </html>
