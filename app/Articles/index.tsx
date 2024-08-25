@@ -5,24 +5,19 @@ import { ZennArticle } from './components/ZennArticle';
 import { ZennArticleType } from './types/ZennArticleType';
 
 export const Articles: FC = async () => {
-  // const [articles, setArticles] = useState<ZennArticleType[]>([]);
-  // useEffect(() => {
-  //   const fetchArticles = async () => {
-  //     const result = await getZennArticles();
-  //     setArticles(result);
-  //   };
-  //   void fetchArticles();
-  // }, []);
   const articles = await getZennArticles();
 
   return (
-    <section>
-      <h1 className="mb-4 mt-12 text-2xl font-semibold">Zenn</h1>
-      <div className="mb-10 grid gap-x-2 gap-y-3 sm:grid-cols-2">
+    <section className="grid">
+      <h2 className="mb-7 mt-16 text-3xl font-semibold"># Articles</h2>
+      <div className="grid gap-x-2 gap-y-3 sm:grid-cols-2">
         {articles?.map((article) => (
           <ZennArticle article={article} key={article.id}></ZennArticle>
         ))}
       </div>
+      <a className="mr-1 mt-3 mb-12 text-lg text-muted-foreground text-right">
+        👉 read more
+      </a>
     </section>
   );
 };
@@ -30,11 +25,11 @@ export const Articles: FC = async () => {
 export const getZennArticles: () => Promise<ZennArticleType[]> = async () => {
   const res = await fetch(
     'https://zenn.dev/api/articles?username=zhenyou620&order=latest',
-    { next: { revalidate: 3600 } } // 1時間ごとに再検証
+    { next: { revalidate: 3600 } }
   );
 
   const data = await res.json();
-  const articles: ZennArticleType[] = data?.articles?.slice(0, 10);
+  const articles: ZennArticleType[] = data?.articles?.slice(0, 6);
 
   return articles;
 };
