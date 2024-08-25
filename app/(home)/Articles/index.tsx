@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import { ZennArticle } from './components/ZennArticle';
 import { ZennArticleType } from './types/ZennArticleType';
+import Link from 'next/link';
 
 export const Articles: FC = async () => {
   const articles = await getZennArticles();
@@ -15,9 +16,12 @@ export const Articles: FC = async () => {
           <ZennArticle article={article} key={article.id}></ZennArticle>
         ))}
       </div>
-      <a className="mr-1 mt-3 mb-12 text-lg text-muted-foreground text-right">
+      <Link
+        href="articles"
+        className="mr-1 mt-3 mb-12 text-lg text-muted-foreground text-right cursor-pointer hover:text-primary transition"
+      >
         👉 read more
-      </a>
+      </Link>
     </section>
   );
 };
