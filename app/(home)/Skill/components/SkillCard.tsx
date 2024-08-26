@@ -36,12 +36,12 @@ export const SkillCard: FC<Props> = ({ skillsData }) => {
         <Card className="" key={skill.name}>
           <CardContent>
             <div className="flex flex-row items-center gap-3 pt-5">
-              <span className="w-8">
+              <span className="w-12">
                 <Image
                   src={skill.url}
                   alt={skill.altText}
-                  width="24"
-                  height="24"
+                  width="36"
+                  height="36"
                   className={`${skill.name === 'Figma' ? 'w-5' : 'w-8'}`}
                 ></Image>
               </span>

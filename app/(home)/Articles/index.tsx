@@ -20,7 +20,7 @@ export const Articles: FC = async () => {
         href="articles"
         className="mr-1 mt-3 mb-12 text-lg text-muted-foreground text-right cursor-pointer hover:text-primary transition"
       >
-        👉 read more
+        <span className="text-lg align-bottom">👉</span> read more
       </Link>
     </section>
   );
