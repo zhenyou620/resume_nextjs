@@ -4,14 +4,16 @@ export const Header: FC = () => {
   return (
     <div className="">
       <header className="py-5  my-0 mx-auto max-w-3xl">
-        <ul className="flex gap-4 items-center">
-          <li>
-            <span className="text-3xl">👩🏻‍💻</span>
-          </li>
-          <li>mayu</li>
-          <li>/</li>
-          <li>notes</li>
-        </ul>
+        <nav>
+          <ul className="flex items-center font-medium ">
+            <li>
+              <span className="text-3xl ">👩🏻‍💻</span>
+            </li>
+            <li className="ml-3 ">mayu</li>
+            <li className="text-base mx-2 font-normal">/</li>
+            <li>notes</li>
+          </ul>
+        </nav>
       </header>
     </div>
   );

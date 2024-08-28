@@ -17,7 +17,7 @@ export const ZennArticle: FC<Props> = ({ article }) => {
           <div className="flex flex-row items-center gap-3 pt-4">
             <span className="p-2 text-5xl">{article.emoji}</span>
             <div className="flex flex-col">
-              <h2 className="line-clamp-2 text-base font-bold tracking-tight text-neutral-600">
+              <h2 className="line-clamp-2 text-base font-bold tracking-tight text-neutral-800">
                 {article.title}
               </h2>
               <p className="text-xs font-medium text-neutral-500">

@@ -1,16 +1,20 @@
-import type { FC } from 'react';
+import { useState, type FC } from 'react';
 import Image from 'next/image';
 
 export const Personal: FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   return (
     <div className="mx-auto mb-0 mt-16 flex flex-col content-center gap-5">
-      <div>
-        {/* <div className="face hidden h-14 w-14 rounded-xl sm:block"></div> */}
-        {/* <p className="text-5xl">👩🏻‍💻</p> */}
-        <span className="-ml-[0.175rem] text-6xl font-bold tracking-tight">
-          Mayu Sakaguchi
-        </span>
-      </div>
+      <header>
+        <div className="bg-red-500 max-w-3xl my-0 mx-auto transition-all duration-300 ease-in-out ">
+          {/* <div className="face hidden h-14 w-14 rounded-xl sm:block"></div> */}
+          <span className="text-2xl mr-2 hidden">👩🏻‍💻</span>
+          <span className="-ml-[0.175rem] text-6xl font-bold tracking-tight w-full">
+            Mayu Sakaguchi
+          </span>
+        </div>
+      </header>
       <div className="text-base tracking-wide text-muted-foreground">
         <p>
           Mayu is a Software developer.&nbsp;&nbsp;I was born and raised in
